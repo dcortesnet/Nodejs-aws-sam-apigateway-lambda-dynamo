@@ -1,4 +1,4 @@
-# AWS SAM Nodejs Simple Serverless &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+# Nodejs AWS SAM API Gateway lambda dynamoDB &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 > AWS SAM
 
