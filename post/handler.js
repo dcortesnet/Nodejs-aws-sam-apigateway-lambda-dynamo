@@ -10,7 +10,7 @@ exports.saveHello = async (event) => {
     };
     await saveItem(item);
     return {
-      statusCode: 200,
+      statusCode: 201,
       headers: {
         'Content-Type': 'application/json',
       },
