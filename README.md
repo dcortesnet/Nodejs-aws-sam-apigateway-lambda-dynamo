@@ -10,7 +10,7 @@
 
 Descripción del proyecto: Proyecto de infraestructura como código utilizando SAM para el despliegue de una infraestructura básica común en los servicios de AWS
 
-## Infraestructura a desplegar
+## Arquitectura a desplegar
 
 <img width="400" alt="cal-ios" src="./infra.png">
 
