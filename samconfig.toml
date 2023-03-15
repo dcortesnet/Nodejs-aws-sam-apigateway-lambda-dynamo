@@ -1,0 +1,12 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "nodejs-aws-sam-api-gateway-lambda-dynamo"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1n49ran6uirlg"
+s3_prefix = "nodejs-aws-sam-api-gateway-lambda-dynamo"
+region = "us-east-1"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+disable_rollback = true
+image_repositories = []

@@ -3,37 +3,27 @@ const dynamo = new AWS.DynamoDB.DocumentClient();
 const TABLE_NAME = process.env.GREETINGS_TABLE;
 
 exports.getHello = async (event) => {
-  const name = event.queryStringParameters.name;
   try {
-    const item = await getItem(name);
-    console.log(item);
-    if (item.date) {
-      const d = new Date(item.date);
-      return {
-        statusCode: 200,
-        body: `Was greeted on ${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`
-      };
-    }
-  } catch (e) {
+    const items = await getAllItems();
     return {
       statusCode: 200,
-      body: 'Nobody was greeted with that name'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(items),
+    };
+  } catch (e) {
+    return {
+      statusCode: 500,
+      body: 'Internal Server error'
     };
   }
 }
 
 
-async function getItem(name) {
-  console.log('getItem');
+async function getAllItems() {
   const params = {
-    Key: {
-      id: name,
-    },
     TableName: TABLE_NAME
   };
-  console.log(params);
-  return dynamo.get(params).promise().then(result => {
-    console.log(result);
-    return result.Item;
-  });
+  return await dynamo.scan(params).promise()
 };
