@@ -8,10 +8,10 @@ exports.saveHello = async (event) => {
       id: Math.random().toString(36).substring(2, 100),
       date: Date.now()
     };
-    const savedItem = await saveItem(item);
+    await saveItem(item);
     return {
       statusCode: 200,
-      body: JSON.stringify(savedItem),
+      body: JSON.stringify(item),
     };
   } catch (error) {
     return {
