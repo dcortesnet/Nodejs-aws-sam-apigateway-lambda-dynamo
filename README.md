@@ -65,6 +65,12 @@ POST https://x90ri7iu80.execute-api.us-east-1.amazonaws.com/Prod/hello/
 GET https://x90ri7iu80.execute-api.us-east-1.amazonaws.com/Prod/hello/
 ```
 
+## Eliminar aplicación AWS Cloud Formation
+
+```
+sam delete
+```
+
 ## Equipo
 
 Desarrollado por Diego Cortés
