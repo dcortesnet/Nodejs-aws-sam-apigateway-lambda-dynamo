@@ -11,6 +11,9 @@ exports.saveHello = async (event) => {
     await saveItem(item);
     return {
       statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify(item),
     };
   } catch (error) {
