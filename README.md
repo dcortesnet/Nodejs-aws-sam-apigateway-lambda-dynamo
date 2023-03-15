@@ -26,21 +26,35 @@ Descripción del proyecto: Proyecto de infraestructura como código utilizando S
 
 * Instalación de Nodjes
   * https://nodejs.org/es/
+* Instalación de AWS CLI
+  * https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 * Instalación de CLI SAM
   * https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html
+* Credenciales de AWS con políticas de 
+  * AmazonS3FullAccess
 
-## Instalación
+## Configuración de credenciales
 
-ejecutar comando
-
-```
-npm install
-```
-
-## Levantar proyecto
+Ejecutar comando de configuración de AWS CLI para la ingresar las credenciales
 
 ```
-npm run develop
+aws configure
+```
+
+## Validar Yaml
+
+Ejecutar comando
+
+```
+sam validate
+```
+
+## Deploy proyecto en AWS
+
+Para desplegar aplicación en AWS
+
+```
+sam deploy --guided
 ```
 
 ## Equipo
