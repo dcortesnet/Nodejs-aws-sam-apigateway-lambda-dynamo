@@ -1,13 +1,5 @@
 # Nodejs AWS SAM API Gateway lambda dynamoDB &middot; ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-> AWS SAM
-
-> AWS Lambda
-
-> AWS API Gateway
-
-> AWS Dynamo DB
-
 Descripción del proyecto: Proyecto de infraestructura como código utilizando SAM para el despliegue de una infraestructura básica común en los servicios de AWS
 
 ## Arquitectura a desplegar
